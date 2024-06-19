@@ -1,0 +1,48 @@
+﻿@using EUROResultsWithBlazorWASM.Dtos.Matches
+<li class="list-group-item">
+    <div class="row ">
+
+        <!-- TEAM -->
+        <div class="col-lg-4 d-flex align-items-center" style="text-align: center;">
+            <span class="flag ms-2">
+                <img class="rounded-circle border border-2"
+                     src="@Row.team.crest"
+                     alt=""
+                     style="width: 40px; height: 40px">
+            </span>
+
+
+            <div class="team-name ">
+                <h5 style="margin:auto 10px; text-align: center;">@Row.team.shortName</h5>
+            </div>
+
+        </div>
+        <!--// TEAM //-->
+        <!-- WIN -->
+        <div class="col-lg-2 text-center align-content-center">
+            @Row.won
+        </div>
+        <!--// WIN //-->
+        <!-- LOSS -->
+        <div class="col-lg-2 text-center align-content-center">
+            @Row.draw
+        </div>
+        <!--// LOSS //-->
+        <div class="col-lg-2 text-center align-content-center">
+            @Row.lost
+        </div>
+
+        <div class="col-lg-2 text-center align-content-center">
+            <b>
+                @Row.points
+            </b>
+        </div>
+    </div>
+</li>
+
+@code
+{
+    [Parameter] public TableDto? Row { get; set; }
+
+
+}

@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\obj\\Debug\\net7.0\\compressed\\p9n44g975x.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\Favicon\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\Favicon\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\Favicon\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\Favicon\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\Favicon\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\Favicon\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\Favicon\\site.webmanifest",
+      "PackagePath": "staticwebassets\\Favicon\\site.webmanifest"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\images\\Euro-word.png",
+      "PackagePath": "staticwebassets\\images\\Euro-word.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\images\\pattern.png",
+      "PackagePath": "staticwebassets\\images\\pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hp\\Desktop\\Demo\\EUROResultsWithBlazorWASM\\EUROResultsWithBlazorWASM\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.EUROResultsWithBlazorWASM.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.EUROResultsWithBlazorWASM.props",
+      "PackagePath": "build\\EUROResultsWithBlazorWASM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.EUROResultsWithBlazorWASM.props",
+      "PackagePath": "buildMultiTargeting\\EUROResultsWithBlazorWASM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.EUROResultsWithBlazorWASM.props",
+      "PackagePath": "buildTransitive\\EUROResultsWithBlazorWASM.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

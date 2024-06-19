@@ -1,0 +1,2 @@
+C:\Users\Hp\Desktop\Demo\EUROResultsWithBlazorWASM\EUROResultsWithBlazorWASM\obj\Release\net7.0\browser-wasm\PubTmp\Out\libman.json
+C:\Users\Hp\Desktop\Demo\EUROResultsWithBlazorWASM\EUROResultsWithBlazorWASM\obj\Release\net7.0\browser-wasm\PubTmp\Out\web.config
