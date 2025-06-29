@@ -44,7 +44,8 @@ A Blazor WebAssembly application that displays EURO 2024 match results and stand
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/euro-2024-results.git
+   
+   git clone https://github.com/ziadhanii/euro-2024-results-using-blazor-web-assembly.git
    ```
 
 2. Navigate to the API project:
