@@ -1,0 +1,49 @@
+﻿<li class="list-group-item">
+    <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center" style="text-align: center;">
+            <span class="flag ms-2">
+                <img class="rounded-circle border border-2"
+                     src="@GetTeamCrest()"
+                     alt=""
+                     style="width: 40px; height: 40px">
+            </span>
+
+
+            <div class="team-name">
+                <h5 style="margin:auto 10px; text-align: center; font-size: calc(0.9rem + 0.3vw);">@GetTeamShortName()</h5>
+            </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center align-content-center">
+            @GetWon()
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center align-content-center">
+            @GetDraw()
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center align-content-center">
+            @GetLost()
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center align-content-center">
+            <b>
+                @GetPoints()
+            </b>
+        </div>
+    </div>
+</li>
+
+@code
+{
+    [Parameter] public TableDto Row { get; set; } = default!;
+    
+    private string GetTeamCrest() => Row?.team?.crest ?? "";
+    private string GetTeamShortName() => Row?.team?.shortName ?? "";
+    private int GetWon() => Row?.won ?? 0;
+    private int GetDraw() => Row?.draw ?? 0;
+    private int GetLost() => Row?.lost ?? 0;
+    private int GetPoints() => Row?.points ?? 0;
+}

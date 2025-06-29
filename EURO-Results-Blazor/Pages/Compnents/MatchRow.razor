@@ -1,0 +1,89 @@
+﻿<div class="col-lg-12">
+    <div class="card shadow rounded-pill mt-4 mt-md-5" style="overflow: hidden">
+        <div class="card-body p-0">
+            <div class="row">
+                <div
+                    class="col-lg-3 col-md-3 col-sm-6 col-6 bg-primary d-flex flex-direction-column justify-content-center align-items-center"
+                    style="border-right: solid 5px #0033ff;">
+                    <div class="d-flex align-items-center justify-content-center"
+                         style="text-align: center; margin: auto 0; padding: 10px 0;">
+                        <div>
+                            <div class="flag ms-1">
+                                <img class="rounded-circle border border-2" src="@GetHomeTeamCrest()" alt=""
+                                     style="width: 40px; height: 40px">
+                            </div>
+                            <div>
+                                <h5 class="pt-2 CustomFont"
+                                    style="margin:auto 5px; font-size: calc(1rem + 0.1vw);">@GetHomeTeamTla()</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-2 col-md-2 col-sm-6 col-6 d-flex justify-content-center align-items-center CustomFont">
+                    <h2 class="mb-0 score-text">
+                        @GetHomeScore()
+                    </h2>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-12 py-2" style="text-align: center">
+                    <div class="CustomFont">
+                        <h6 class="mb-1">@GetGroup()</h6>
+                        <h1 class="mb-1 versus-symbol">X</h1>
+                        <h6 class="mb-1 match-time">@GetMatchTime()</h6>
+                    </div>
+
+                    <h4 class="mb-2 match-status">
+                        @switch (GetMatchStatus())
+                        {
+                            case "FINISHED":
+                                <div class="text-danger">انتهت</div>
+                                break;
+                            case "TIMED":
+                                <div>لم تبدأ</div>
+                                break;
+                            default:
+                                <div class="text-success">جاري الآن</div>
+                                break;
+                        }
+                    </h4>
+                </div>
+
+                <div
+                    class="col-lg-2 col-md-2 col-sm-6 col-6 d-flex justify-content-center align-items-center CustomFont">
+                    <h2 class="mb-0 score-text">
+                        @GetAwayScore()
+                    </h2>
+                </div>
+                <div
+                    class="col-lg-3 col-md-3 col-sm-6 col-6 bg-primary d-flex flex-direction-column justify-content-center align-items-center"
+                    style="border-left: solid 5px #0033ff;">
+                    <div class="d-flex align-items-center justify-content-center"
+                         style="text-align: center; margin: auto 0; padding: 10px 0;">
+                        <div>
+                            <div class="flag ms-1">
+                                <img class="rounded-circle border border-2" src="@GetAwayTeamCrest()" alt=""
+                                     style="width: 40px; height: 40px">
+                            </div>
+                            <h5 class="pt-2 CustomFont"
+                                style="margin:auto 5px; font-size: calc(1rem + 0.1vw);">@GetAwayTeamTla()</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public MatchesDto? Match { get; set; } = default!;
+
+    private string GetHomeTeamCrest() => Match?.homeTeam?.crest ?? "";
+    private string GetHomeTeamTla() => Match?.homeTeam?.tla ?? "";
+    private string GetAwayTeamCrest() => Match?.awayTeam?.crest ?? "";
+    private string GetAwayTeamTla() => Match?.awayTeam?.tla ?? "";
+    private string GetGroup() => Match?.group?.Replace('_', ' ') ?? "";
+    private string GetHomeScore() => Match?.score?.fullTime?.home?.ToString() ?? "-";
+    private string GetAwayScore() => Match?.score?.fullTime?.away?.ToString() ?? "-";
+    private string GetMatchStatus() => Match?.status ?? "";
+    private TimeOnly GetMatchTime() => Match?.utcDate != null ? TimeOnly.FromDateTime(Match.utcDate.ToLocalTime()) : new TimeOnly();
+}

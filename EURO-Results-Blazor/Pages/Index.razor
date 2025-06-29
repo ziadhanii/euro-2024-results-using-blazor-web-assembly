@@ -1,0 +1,108 @@
+﻿@page "/"
+@inject IMatchServices MatchService
+
+<div id="logo-header">
+    <img id="logo-img" src="/images/logo.png" alt="">
+</div>
+
+<div id="header" class="bg-primary">
+    <div id="header-background">
+        <div class="header-text">
+            <h1 class="title-first">بطولة</h1>
+            <h1 class="title-second">أمم أوروبا 2024</h1>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center" style="margin-top: 70px;">
+    <img src="/images/Euro-word.png" alt="" class="img-fluid" style="width: 600px; max-width: 100%;">
+</div>
+
+<div class="container-fluid container-lg" style="margin-top: 50px">
+    <div class="p-5 mt-1">
+        <div class="row" style="direction: rtl;">
+            <h1>
+                <b>المجموعات</b>
+            </h1>
+            <hr>
+        </div>
+
+        <div class="row CustomFont" id="standings">
+            @if (_standingsResponse is not null && _standingsResponse.standings != null)
+            {
+                foreach (var item in _standingsResponse.standings)
+                {
+                    <div class="col-md-6 col-sm-12 mt-4">
+                        <div class="card shadow border-none">
+                            <div class="card-header bg-primary text-center">
+                                <b>@item.group</b>
+                            </div>
+                            <div class="row m-0 bg-secondary text-center">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                    Team
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                    W
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                    D
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                    L
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                    Pts
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                @foreach (var TeamRow in item.table)
+                                {
+                                    <TableRow Row="TeamRow"/>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row" style="direction: rtl;">
+            <h1>
+                <b>
+                    مباريات اليوم
+                </b>
+            </h1>
+            <hr>
+        </div>
+        <div class="row" id="matches">
+            @if (_matchesResponse is not null)
+            {
+                if (_matchesResponse.matches.Any())
+                {
+                    foreach (var match in _matchesResponse.matches)
+                    {
+                        <MatchRow Match="match"/>
+                    }
+                }
+                else
+                {
+                    <h3 class="text-center text-danger">لا توجد مباريات في هذا اليوم</h3>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private StandingsResponseDto? _standingsResponse;
+    private MatchesResponseDto? _matchesResponse;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _standingsResponse = await MatchService.GetStandings();
+        _matchesResponse = await MatchService.GetMatches();
+    }
+
+}
